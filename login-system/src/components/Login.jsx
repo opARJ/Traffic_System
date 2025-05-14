@@ -77,11 +77,11 @@ const Login = () => {
           />
         </div>
       </div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p style={{ color: "lightblue" }}>{error}</p>}
       <br/>
       <button onClick={handleLogin}><a>Login</a></button>
       <p>
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+        Don't have an account? <Link to="/signup">Sign Up!!</Link>
       </p>
     </div>
     </div>
