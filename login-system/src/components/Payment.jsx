@@ -45,7 +45,7 @@ const Payment = () => {
                 const updatedVehicles = await Promise.all(
                     vehicles.map(async (vehicle) => {
                         try {
-                            const statusResponse = await fetch("http://ec2-43-205-135-163.ap-south-1.compute.amazonaws.com:8080/police/update-fine-status", {
+                            const statusResponse = await fetch("http://ec2-43-205-135-163.ap-south-1.compute.amazonaws.com:8080/police/police/update-fine-status", {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",
@@ -85,13 +85,40 @@ const Payment = () => {
             rowData: row,
       });
   };
-   // Close Popup
-   const handleClosePopup = () => {
-    alert(`${popup.rowData?.vlicensePlate} has been caught!! Flag Raised`);
-    setTimeout(() => {
+
+    const handleAction = async (payFineValue) => {
+        const licensePlate = popup.rowData?.vlicensePlate;
+        if (!licensePlate) return;
+
+        try {
+            const response = await fetch("http://ec2-43-205-135-163.ap-south-1.compute.amazonaws.com:8080/police/police/update-fine-status", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    licensePlate,
+                    payFine: payFineValue
+                })
+            });
+
+            const result = await response.json();
+            alert(`${licensePlate} has been updated. Action: ${payFineValue === "Yes" ? "Release" : "Seize"}`);
+        } catch (error) {
+            console.error("Action failed:", error);
+            alert("Error performing action");
+        }
+
         setPopup({ ...popup, show: false });
-    }, 200);
-   };
+    };
+
+//    // Close Popup
+//    const handleClosePopup = () => {
+//     alert(`${popup.rowData?.vlicensePlate} has been caught!! Flag Raised`);
+//     setTimeout(() => {
+//         setPopup({ ...popup, show: false });
+//     }, 200);
+//    };
 
     return (
         <div className="Pay_container">
@@ -141,11 +168,36 @@ const Payment = () => {
                         top: popup.y,
                         left: popup.x,
                         boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+                        padding: "10px",
+                        backgroundColor: "#fff",
+                        borderRadius: "8px",
+                        zIndex: 1000
                     }}
                 >
-                    <button onClick={handleClosePopup}>
-                        Catch?? 
-                        {/* {popup.rowData.Number} */}
+                    <button
+                        onClick={() => handleAction("No")}
+                        style={{
+                            marginRight: "10px",
+                            backgroundColor: "#f44336",
+                            color: "white",
+                            padding: "8px 20px",
+                            borderRadius: "4px",
+                            border: "none"
+                        }}
+                    >
+                        Seize
+                    </button>
+                    <button
+                        onClick={() => handleAction("Yes")}
+                        style={{
+                            backgroundColor: "#4CAF50",
+                            color: "white",
+                            padding: "8px 20px",
+                            borderRadius: "4px",
+                            border: "none"
+                        }}
+                    >
+                        Release
                     </button>
                 </div>
             )}
