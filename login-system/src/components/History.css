@@ -1,0 +1,101 @@
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header-left h2 {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+  
+  .header-left h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* left align */
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .header-right p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .india-map {
+    margin-right: 100px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+  }
+
+.H_container{
+    overflow-x: auto;
+    height: 100vh;
+    margin-left: 25px;
+    margin-top: 50px;
+    margin-right: 25px;
+ 
+}
+.Search{
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.search-bar{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 6px;
+    width: 250px;
+    margin-top: 10px;
+}
+
+.search i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+table{
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border: 0;
+    background-color: #fff;
+    border-collapse: collapse;
+    margin-right: 50px;
+
+}
+th{
+    padding: auto;
+    background-color: #1b18ae8e;
+    color: #fff;
+    text-align: left;
+}
+th:first-of-type{
+    border-top-left-radius: auto;
+}
+th:last-of-type{
+    border-top-right-radius: auto;
+}
+tr:hover{
+    background-color: #7777ac8e;
+}
+td{
+    padding: auto;
+}

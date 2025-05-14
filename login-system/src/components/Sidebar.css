@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+  }
+  
+  .Sidebar_container{
+    display:flex;
+    padding-right: auto;
+  }
+  main{
+    /* padding: 20px; */
+    width: calc(100% - 200px);   /* adjust remaining width */
+    overflow: auto;
+    transition: all 0.5s;
+  }
+  .sidebar{
+    position: fixed;             /* fix it to the side */
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    height: 100vh;               /* full height */
+    width: 200px;
+    transition: all 0.5s;
+    z-index: 1000;               /* stay above other elements */
+    overflow-y: auto;
+  }
+  .top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+  }
+  .logo{
+    font-size: 30px;
+    color: #000000;
+  }
+  .bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+    
+}
+
+  .link{
+    display: flex;
+    color: #000000;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+  }
+  .link:hover{
+    background:#1b18ae8e;
+    color: #c9e6f9;
+    transition: all 0.5s;
+  }
+  .active{
+    background: #8cb9f1(108, 21, 184);
+    color: #1b18ae8e;
+  }
+  .icon, .link_text{
+    font-size: 20px;
+  }
+  .logout_section{
+    display:flex;
+    margin-top: 350px;
+    margin-left: 0px;
+    align-items: center;
+  }
+
+  /* .logout_section button{
+    padding: 10px 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    background-color: #1b18ae8e;
+    flex-direction: column;
+    align-items: center;
+  } */
+  .logout-btn {
+    padding: 10px 8px;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    background-color: #ffffff;
+  }
+  .logout-btn.expanded {
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  

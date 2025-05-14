@@ -1,0 +1,149 @@
+/* PoliceProfileCard.css */
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+
+  .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card, .fines-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 24rem;
+    text-align: center;
+    min-height: 280px;
+    
+  }
+  
+  .profile-image {
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+    border-radius: 50%;
+    border: 4px solid #e5e7eb;
+  }
+  
+  .profile-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .profile-role {
+    color: #6b7280;
+  }
+  
+  .profile-description {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+  
+  .profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  
+  .stat-number {
+    color: #1e40af;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  
+  .stat-label {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .fines-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  
+  .fines-description {
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+  
+  .fines-stats {
+    margin-top: 1rem;
+  }
+  
+  .fines-box {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .violations {
+    background-color: #dc2626;
+    color: white;
+  }
+  
+  .collected {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .fines-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .fines-label {
+    font-size: 0.875rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: #6b7280;
+  }
+  
+  .logout-button {
+    display: block;
+    margin: 2rem auto 0 auto;
+    padding: 0.75rem 2rem;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logout-button:hover {
+    background-color: #162d6a;
+    transform: translateY(-2px);
+  }
+  
+  .logout-button:active {
+    background-color: #122553;
+    transform: translateY(0);
+  }
