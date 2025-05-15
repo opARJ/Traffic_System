@@ -23,7 +23,7 @@ const Login = () => {
     }
     try {
       const response = await fetch(
-        "http://ec2-43-205-135-163.ap-south-1.compute.amazonaws.com:8080/police/login",
+        "https://cors-anywhere.herokuapp.com/http://ec2-43-205-135-163.ap-south-1.compute.amazonaws.com:8080/police/login",
         {
           method: "POST",
           headers: {
