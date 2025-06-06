@@ -9,6 +9,9 @@ import Payment from "./components/Payment";
 import Fine from "./components/Fine";
 import History from "./components/History"
 import Profile from "./components/profile";
+import UserDashboard from "./components/user/UserDashboard";
+import PaymentHistory from "./components/user/PaymentHistory";
+import CarStatus from "./components/user/CarStatus";
 import { Provider } from "react-redux";
 import store from "./store";
 import './App.css';
@@ -18,7 +21,7 @@ const App = () => {
   const location = useLocation();
 
   // Routes where the Sidebar should not appear
-  const hideSidebarRoutes = ["/", "/signup"];
+  const hideSidebarRoutes = ["/","/signup","/UserDashboard","/PaymentHistory","/CarStatus"];
 
   return (
     <div style={{ display: "flex" }}>
@@ -36,6 +39,9 @@ const App = () => {
           <Route path="/Fine" element={<PrivateRoute><Fine /></PrivateRoute>} />
           <Route path="/History" element={<PrivateRoute><History /></PrivateRoute>} />
           <Route path="/Profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+          <Route path="/UserDashboard" element={<UserDashboard />} />
+          <Route path="/PaymentHistory" element={<PaymentHistory/>}/>
+          <Route path="/CarStatus" element={<CarStatus/>}/>
         </Routes>
       </div>
     </div>

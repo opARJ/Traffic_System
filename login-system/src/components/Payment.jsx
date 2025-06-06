@@ -55,7 +55,7 @@ const Payment = () => {
                             const statusData = await statusResponse.json();
                             return {
                                 ...vehicle,
-                                seizeStatus: statusData.seizeStatus || "Unknown"
+                                seizeStatus: statusData.seizeStatus 
                             };
                         } catch (error) {
                             console.error(`Error fetching status for ${vehicle.vlicensePlate}:`, error);

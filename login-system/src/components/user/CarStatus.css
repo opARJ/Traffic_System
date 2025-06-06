@@ -1,0 +1,17 @@
+.car-status {
+  padding: 30px;
+  background-color: #fff;
+  color: #222;
+}
+
+.car-status table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.car-status th, .car-status td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
